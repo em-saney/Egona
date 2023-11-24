@@ -37,7 +37,7 @@ const contact_post = async (req, res) => {
       const emailSubject = `Submission Received`;
       const emailText = `Your submission has been received, a response will be sent by our response team shortly. Thank You for choosing E-Gona`; 
 
-      const result = await sendEmail(userEmail, emailSubject, emailText, emailHTML);
+      const result = await sendEmail(userEmail, emailSubject, emailText);
       console.log('Email sent', result)
       
       res.status(201).json({ sucess: true, user: user._id, message: 'Request sent successfully'});

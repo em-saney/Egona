@@ -58,11 +58,7 @@ exports.signUp = async (req, res) => {
       /* Sending an email to the user whenever they sign up */
       const userEmail = user.email;
       const emailSubject = `Welcome to E-Gona, ${user.name}!!!`;
-      const emailText = `We are delighted to have you on E-Gona, we are geared at offering you the best services when it comes to purchasing fresh and healthy agricultural products. We have carefully vetted all these products before bringing to you. We have made buying groceries relatively convenient with our seamless and easy purchasing methods and we also ensure safe and fast delivery at you.
-      
-      At E-Gona, our farmers are our driving force, with their beautiful and fresh farm produce, they are able to reach a larger audience and also sell their products, by setting up their stores and making sales.
-      
-      A Customer on E-Gona is happy person and a Farmer on E-Gona is....omo i don lost😞😞`; 
+      const emailText = `We are delighted to have you on E-Gona, we are geared at offering you the best services when it comes to purchasing fresh and healthy agricultural products. We have carefully vetted all these products before bringing to you. We have made buying groceries relatively convenient with our seamless and easy purchasing methods and we also ensure safe and fast delivery at you.`; 
 
       const result = await sendEmail(userEmail, emailSubject, emailText);
       console.log('Email sent', result)
@@ -88,7 +84,7 @@ exports.login = async (req, res) => {
        /* Sending an email to the user whenever they sign up */
       const userEmail = user.email;
       const emailSubject = `Login alert from an unknown device`;
-      const emailText = 'Senior man, we don recieve login alert from unknown device o, make you try very if na you, if not sharply change password oo, no talk say i no tanana you early😉'; 
+      const emailText = 'Senior man, we don recieve login alert from unknown device o, make you try verify if na you, if not sharply change password oo, no talk say i no update you early😉'; 
  
       const result = await sendEmail(userEmail, emailSubject, emailText);
       console.log('Email sent', result);
